@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :addresses, dependent: :destroy
+  has_many :albums, dependent: :destroy
 
   before_save :normalize_attrs
 
