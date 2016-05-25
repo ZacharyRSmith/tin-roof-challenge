@@ -1,4 +1,8 @@
 <li id="album-<%= album.id %>">
   <%= link_to album.title, album %><br />
-  <img src="<%= album.photos.first[:thumbnailUrl] %>">
+  <% if album.photos.any? %>
+    <img src="<%= album.photos.first[:thumbnailUrl] %>">
+  <% else %>
+    <div>No photos! D :</div>
+  <% end %>
 </li>
