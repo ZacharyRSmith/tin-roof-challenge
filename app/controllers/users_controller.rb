@@ -6,6 +6,11 @@ class UsersController < ApplicationController
     redirect_to root_url
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    redirect_to users_url
+  end
+
   def edit
     @user = User.find params[:id]
   end

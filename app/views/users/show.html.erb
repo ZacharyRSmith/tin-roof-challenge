@@ -12,7 +12,9 @@
       </p>
     </section>
 
-    <%= link_to "Update User", edit_user_url %>
+    <%= link_to "Update User", edit_user_url %><br />
+    <%= link_to "Delete User", @user, method: :delete,
+                                      data: { confirm: "You sure?" } %>
   </aside>
 
   <div class="col-md-8">
