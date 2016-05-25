@@ -18,8 +18,9 @@
   </aside>
 
   <div class="col-md-8">
+    <h3>Albums (<%= @albums.count %>)</h3>
+    <%= link_to "Create Album", new_album_url %><br />
     <% if @albums.any? %>
-      <h3>Albums (<%= @albums.count %>)</h3>
       <ul class="albums">
         <%= render @albums %>
       </ul>
