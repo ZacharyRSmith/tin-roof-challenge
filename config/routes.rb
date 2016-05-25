@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'users#index'
   resources :albums
+  resources :photos
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
