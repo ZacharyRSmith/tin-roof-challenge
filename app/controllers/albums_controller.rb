@@ -12,8 +12,18 @@ class AlbumsController < ApplicationController
     redirect_to root_url
   end
 
+  def edit
+    @album = Album.find params[:id]
+  end
+
   def new
     @album = Album.new
+  end
+
+  def update
+    @album = Album.find params[:id]
+    return render 'edit' unless @album.update_attributes album_params
+    redirect_to @album
   end
 
   def show

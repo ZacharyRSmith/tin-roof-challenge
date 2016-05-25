@@ -4,8 +4,9 @@
       <h1><%= @album.title %></h1>
     </section>
 
+    <%= link_to "Update Album", edit_album_url %><br />
     <%= link_to "Delete Album", @album, method: :delete,
-                                      data: { confirm: "You sure?" } %>
+                                      data: { confirm: "You sure?" } %><br />
   </aside>
 
   <div class="col-md-8">
