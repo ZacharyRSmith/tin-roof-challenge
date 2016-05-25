@@ -1,10 +1,11 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="album_info">
-      <h1>
-        <%= @album.title %>
-      </h1>
+      <h1><%= @album.title %></h1>
     </section>
+
+    <%= link_to "Delete Album", @album, method: :delete,
+                                      data: { confirm: "You sure?" } %>
   </aside>
 
   <div class="col-md-8">
