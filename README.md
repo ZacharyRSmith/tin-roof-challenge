@@ -7,4 +7,4 @@
 
 * Database creation: Run `rake db:migrate`
 
-* Database initialization: Run `rake db:seed`
+* To initialize/update database: Run `rake json_placeholder:fetch_all`
